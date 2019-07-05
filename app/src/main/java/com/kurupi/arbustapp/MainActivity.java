@@ -14,6 +14,9 @@ import android.view.MenuItem;
 
 import com.kurupi.arbustapp.dominio.Especie;
 import com.kurupi.arbustapp.ui.ActividadEditarEspecie;
+import com.kurupi.arbustapp.ui.AdaptadorListaDeEspecies;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
