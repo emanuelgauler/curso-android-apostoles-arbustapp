@@ -3,7 +3,6 @@ package com.kurupi.arbustapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.kurupi.arbustapp.datos.RepositorioDeEspeciesEnSQLite;
 import com.kurupi.arbustapp.dominio.Especie;
 import com.kurupi.arbustapp.ui.ActividadEditarEspecie;
 import com.kurupi.arbustapp.ui.AdaptadorListaDeEspecies;
@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private List<Especie> lista_de_especies() {
-        List<Especie> o = null;
-        return o;
+        return Especie.lista_de_especies_del_repositorio(RepositorioDeEspeciesEnSQLite.cargar());
     }
 
     private void iniciar_actividad_para_editar_una_especie(View view) {
